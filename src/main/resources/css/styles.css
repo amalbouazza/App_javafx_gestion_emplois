@@ -1,0 +1,118 @@
+/*
+
+
+
+ */
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+/* Boutons */
+.form_container Button {
+    -fx-background-color: linear-gradient(to right, #24a803, #019123, #226507);
+    -fx-effect: dropshadow(three-pass-box, #AAAAAA, 3, 0, 0, 3);
+    -fx-pref-width: 100;
+    -fx-font-size: 1.2em;
+    -fx-font-family: "Calibri Light";
+    -fx-text-fill: #ffffff;
+}
+/* Centrer horizontalement et verticalement les boutons dans le ButtonBar */
+.button-bar > .container > .button {
+    -fx-alignment: CENTER;
+    -fx-font-size: 1.2em;
+    -fx-background-color: linear-gradient(to right, #24a803, #019123, #226507);
+    -fx-effect: dropshadow(three-pass-box, #AAAAAA, 3, 0, 0, 3);
+    -fx-pref-width: 150px; /* Ajustez la largeur selon vos besoins */
+    -fx-pref-height: 40px; /* Ajustez la hauteur selon vos besoins */
+    -fx-text-fill: #FFFFFF;
+}
+
+/* Style au survol des boutons dans le ButtonBar (facultatif) */
+.button-bar > .container > .button:hover {
+    -fx-background-color: linear-gradient(to right, #019123, #24a803, #226507);
+    -fx-cursor: hand;
+}
+
+/* Style au survol des boutons */
+.form_container Button:hover {
+    -fx-background-color: linear-gradient(to right, #019123, #24a803, #226507);
+}
+/* Arrière-plan de la fenêtre */
+.root {
+    -fx-background-color: #f0f0f0; /* Couleur de fond */
+}
+/* Champs de texte */
+.form_container TextField {
+    -fx-pref-height: 35;
+    -fx-background-color: #FFFFFF;
+    -fx-font-size: 1.3em;
+    -fx-effect: dropshadow(three-pass-box, #AAAAAA, 3, 0, 0, 3);
+}
+
+/* Style au survol des champs de texte (facultatif) */
+.form_container TextField:hover {
+    -fx-border-color: #24a803; /* Couleur de bordure au survol */
+}
+/* Titres */
+.title {
+    -fx-font-size: 2em;
+    -fx-text-fill: #24a803;
+    -fx-font-weight: bold;
+    -fx-padding: 10 0 10 0; /* Espacement du haut et du bas */
+}
+/* Style pour les titres des zones de texte */
+.text-title {
+    -fx-font-size: 1.2em;
+    -fx-fill: #000000; /* Couleur du titre */
+    -fx-font-weight: bold;
+}
+
+
+
+
+
+/* Style pour la barre de défilement verticale */
+.scroll-bar:vertical {
+    -fx-background-color: #F0F0F0; /* Couleur de fond */
+    -fx-padding: 5; /* Espacement interne */
+}
+
+/* Style pour la barre de défilement horizontale */
+.scroll-bar:horizontal {
+    -fx-background-color: #F0F0F0; /* Couleur de fond */
+    -fx-padding: 5; /* Espacement interne */
+}
+
+/* Style pour la poignée de la barre de défilement (Thumb) */
+.scroll-bar .thumb {
+    -fx-background-color: rgba(90, 91, 89, 0.54); /* Couleur de fond de la poignée */
+}
+
+
+
+.listview {
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+}
+
+.listview-item {
+    -fx-padding: 5px;
+}
+
+.listview-item:hover {
+    -fx-background-color: lightgray;
+}
+
+.listview-item:selected {
+    -fx-background-color: rgba(34, 173, 52, 0.47);
+    -fx-text-fill: white;
+}

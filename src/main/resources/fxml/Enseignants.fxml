@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="669.0" prefWidth="904.0" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.app_javafx_gestion_emplois.EnseignantController">
+   <children>
+      <VBox layoutX="14.0" layoutY="221.0" prefHeight="212.0" prefWidth="300.0" spacing="25.0" stylesheets="@../css/styles.css" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="221.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-title" text="Nom&amp;Prenom" />
+            <TextField fx:id="txnom" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-title" text="Contact" />
+            <TextField fx:id="txtel" />
+         </children>
+      </VBox>
+      <TableView fx:id="table" layoutX="332.0" layoutY="136.0" onMouseClicked="#getData" prefHeight="290.0" prefWidth="512.0" stylesheets="@../css/styles.css" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="136.0">
+        <columns>
+          <TableColumn fx:id="colid" prefWidth="123.0" text="ID" />
+          <TableColumn fx:id="colnom" prefWidth="160.0" text="NOM" />
+            <TableColumn fx:id="colcont" prefWidth="159.199951171875" text="CONTACT" />
+        </columns>
+         <styleClass>
+            <String fx:value="table-row-cell" />
+            <String fx:value="scroll-bar" />
+            <String fx:value="table-view" />
+            <String fx:value="table-cell" />
+         </styleClass>
+      </TableView>
+      <Label contentDisplay="CENTER" layoutX="14.0" layoutY="28.0" prefHeight="35.0" prefWidth="378.0" styleClass="title" stylesheets="@../css/styles.css" text="Enregistrement des enseignants">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <ButtonBar layoutX="69.0" layoutY="490.0" prefHeight="45.0" prefWidth="638.0">
+        <buttons>
+            <Button fx:id="btnadd" mnemonicParsing="false" onAction="#creatEnseignant" prefHeight="34.0" prefWidth="172.0" stylesheets="@../css/styles.css" text="ENREGISTRER" />
+            <Button fx:id="bntupdate" mnemonicParsing="false" onAction="#updateEnseignant" prefHeight="34.0" prefWidth="129.0" stylesheets="@../css/styles.css" text="MODIFIER" />
+          <Button fx:id="btnsupp" mnemonicParsing="false" onAction="#suppEnseignant" prefHeight="34.0" prefWidth="169.0" stylesheets="@../css/styles.css" text="SUPPRIMER" />
+            <Button fx:id="btnclear" mnemonicParsing="false" onAction="#clearForm" prefHeight="32.0" prefWidth="150.0" stylesheets="@../css/styles.css" text="RECOMMENCER" />
+            <Button fx:id="btnrech" contentDisplay="CENTER" mnemonicParsing="false" onAction="#searchEnseignant" prefHeight="34.0" prefWidth="172.0" stylesheets="@../css/styles.css" text="RECHERCHE" />
+        </buttons>
+      </ButtonBar>
+      <TextField fx:id="idEns" layoutX="14.0" layoutY="164.0" prefWidth="300.0" />
+      <Text layoutX="18.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-title" text="Matricule" wrappingWidth="77.36874389648438" />
+   </children>
+   <styleClass>
+      <String fx:value="form_container" />
+      <String fx:value="root" />
+   </styleClass>
+</AnchorPane>
